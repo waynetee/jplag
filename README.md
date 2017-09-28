@@ -33,18 +33,18 @@ options are:
                  stored (default: result)
  -bc <dir>       Name of the directory which contains the basecode (common framework)
  -l <language>   (Language) Supported Languages:
-                 java17 (default), java15, java15dm, java12, java11, python3, c/c++, c#-1.2, char, text, scheme
+                 java18 (default), java17, java15, java15dm, java12, java11, python3, c/c++, c#-1.2, char, text, scheme
 ```
 
 ## Example
-Assume that we want to check students' solutions that are written in Java 1.7.
+Assume that we want to check students' solutions that are written in Python 3.
 
 Each student solution is in its own directory, say `student1`, `student2`, and so on.
 All solutions are in a common directory, say `exercise1`.
 
-To run JPlag, simply type `java -jar jplag-yourVersion.jar -l java17 -r /tmp/jplag_results_exercise1/ -s /path/to/exercise1`
+To run JPlag, simply type `java -jar jplag-yourVersion.jar -l python3 -r /tmp/jplag_results_exercise1/ -s /path/to/exercise1`
 
-- `-l java17` tells JPlag to use the frontend for Java 1.7
+- `-l python3` tells JPlag to use the frontend for Python 3
 - `-s` tells JPlag to recurse into subdirectories; as we assume Java projects, we'll very likely encounter subdirectories such as `student1/src/`
 - `-r /tmp/jplag_results_exercise1` tells JPlag to store the results in the directory `/tmp/jplag_results_exercise1`
 
